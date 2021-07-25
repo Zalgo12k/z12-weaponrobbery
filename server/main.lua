@@ -60,18 +60,12 @@ local timeOut = false
 local alarmTriggered = false
 
 ESX.RegisterServerCallback('z12-weashop:vitrineReward', function(source, cb)
-	local src = source
-    local Player = ESX.GetPlayerFromId(src)
-    local otherchance = math.random(1, 2)
-    local odd = math.random(1, 2)
+local src = source
     local xPlayer = ESX.GetPlayerFromId(source)
-
-    if otherchance == odd then
         local item = math.random(1, #Config.VitrineRewards)
         local amount = math.random(Config.VitrineRewards[item]["amount"]["min"], Config.VitrineRewards[item]["amount"]["max"])
         xPlayer.addInventoryItem(Config.VitrineRewards[item]["item"], amount)
         dclog(xPlayer, 'GunShoptan **'..Config.VitrineRewards[item]["item"]..'** x '..amount..'  Buldu.')
-    end
 end)	
 
 ESX.RegisterServerCallback('z12-weashop:server:setVitrineState', function(source, cb, stateType, state, k)
@@ -99,7 +93,6 @@ end)
 
 ESX.RegisterServerCallback("z12:checkcops",function(source,cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
-	local Players = ESX.GetPlayers()
 	local policeOnline = 0
 	for i = 1, #Players do
 		local xPlayer = ESX.GetPlayerFromId(Players[i])
