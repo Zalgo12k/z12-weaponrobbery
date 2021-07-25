@@ -6,7 +6,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 cf = {}
 -- discord webhook --
 cf.EnableDiscordLog = true
-cf.DiscordWebhook = 'https://discord.com/api/webhooks/869002506578055178/d9NRLiGuMcPRUMS0E8e63BK-YpOW7gqSwAd1LRmZYZIATkoz1vMQZU5-C2jPTvrBmwfs'
+cf.DiscordWebhook = 'webookburaya'
 cf.WebhookName = 'z12 logger' --webhook name
 cf.WebhookAvatarUrl = 'https://i.imgyukle.com/2020/05/11/r8k2GI.png' -- webhook avatar url
 
